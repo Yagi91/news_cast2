@@ -1,7 +1,8 @@
 import MinBlock from "../ui/minBlock";
 import RedText from "../ui/redText";
+import Image from "next/image";
 
-export default function RecentTrending({}) {
+export default function RecentTrending({ articles }) {
   let data1 = [
     {
       caption: "Craig Bator - 27 Dec 2020",
@@ -35,30 +36,39 @@ export default function RecentTrending({}) {
           <div className="grid grid-cols-1 gap-4 space-y-4 lg:space-y-0 lg:grid-cols-2 py-4">
             <a href="#" className="block">
               <div
-                // style={background-image: url('../assets/images/5.jpg')}
-                className="bg-cover h-80 bg-[url('../public/images/5.jpg')]"
-              ></div>
+                // style={{
+                //   backgroundImage: `url('${articles[0].urlToImage}')`,
+                // }}
+                className="bg-cover h-80 bg-[url('../public/images/5.jpg')] relative"
+              >
+                <Image
+                  src={articles[1].urlToImage}
+                  alt=""
+                  srcset=""
+                  fill
+                  style={{
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
               <p className="font-light text-xs opacity-75 mt-4">
-                Craig Bator - 27 Dec 2020
+                {articles[0].source.name}
               </p>
-              <h3 className="font-header text-2xl my-2">
-                Now Is the Time to Think About Your Small Business Success
-              </h3>
-              <p className="font-light opacity-75">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Faucibus lobortis augue condimentum maecenas. Metus at in fames
-                vitae posuere ut vel vulputate....
-              </p>
+              <h3 className="font-header text-2xl my-2">{articles[0].title}</h3>
+              <p className="font-light opacity-75">{articles[0].description}</p>
             </a>
             <div className="space-y-4">
-              {data1.map((val) => {
-                return (
-                  <MinBlock
-                    key={val.headline}
-                    headline={val.headline}
-                    tagline={val.caption}
-                  />
-                );
+              {articles.map((val, i) => {
+                if (i > 0 && i < 6) {
+                  return (
+                    <MinBlock
+                      key={val.url}
+                      headline={val.title}
+                      tagline={val.source.name}
+                      imgUrl={val.urlToImage}
+                    />
+                  );
+                }
               })}
             </div>
           </div>
@@ -72,14 +82,17 @@ export default function RecentTrending({}) {
             </div>
             <div>
               <div className="space-y-4 my-4">
-                {data1.map((val) => {
-                  return (
-                    <MinBlock
-                      key={val.headline}
-                      headline={val.headline}
-                      tagline={val.caption}
-                    />
-                  );
+                {articles.map((val, i) => {
+                  if (i > 5) {
+                    return (
+                      <MinBlock
+                        key={val.url}
+                        headline={val.title}
+                        tagline={val.source.name}
+                        imgUrl={val.urlToImage}
+                      />
+                    );
+                  }
                 })}
               </div>
             </div>

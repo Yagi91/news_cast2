@@ -1,4 +1,6 @@
-export default function Lifestyle({}) {
+import MinBlock from "../ui/minBlock";
+
+export default function Lifestyle({ articles }) {
   return (
     <section className="p-4 lg:p-0 container mx-auto">
       <div className="grid grid-cols-1 space-y-6 lg:space-y-0 lg:grid-cols-3 lg:gap-4">
@@ -7,89 +9,35 @@ export default function Lifestyle({}) {
             Lifestyle
           </h2>
           <div className="grid grid-cols-1 gap-4 space-y-4 lg:space-y-0 lg:grid-cols-2 py-4">
-            <a href="#" className="block">
-              <div
-                //   style="background-image: url('../assets/images/27.jpg')"
-                className="bg-cover h-80"
-              ></div>
-              <p className="font-light text-xs opacity-75 mt-4">
-                Craig Bator - 27 Dec 2020
-              </p>
-              <h3 className="font-header text-2xl my-2">
-                ‘Institutional delivery vital for reducing maternal and neonatal
-                deaths’
-              </h3>
-              <p className="font-light opacity-75">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Faucibus lobortis augue condimentum maecenas. Metus at in fames
-                vitae posuere ut vel vulputate....
-              </p>
-            </a>
-            <a href="#" className="block">
-              <div
-                //   style="background-image: url('../assets/images/28.jpg')"
-                className="bg-cover h-80"
-              ></div>
-              <p className="font-light text-xs opacity-75 mt-4">
-                Craig Bator - 27 Dec 2020
-              </p>
-              <h3 className="font-header text-2xl my-2">
-                ‘Being self-controlled child may lead to healthier middle-age
-              </h3>
-              <p className="font-light opacity-75">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Faucibus lobortis augue condimentum maecenas. Metus at in fames
-                vitae posuere ut vel vulputate....
-              </p>
-            </a>
-            <a href="#" className="grid grid-cols-4 gap-2">
-              <div
-                className="col-span-1 bg-cover h-24"
-                //   style="background-image: url('../assets/images/29.jpg')"
-              ></div>
-              <div className="col-span-3">
-                <p className="font-light text-xs">Craig Bator - 27 Dec 2020</p>
-                <h3 className="font-header text-xl my-2">
-                  Best things you can do on a solo mountain climb
-                </h3>
-              </div>
-            </a>
-            <a href="#" className="grid grid-cols-4 gap-2">
-              <div
-                className="col-span-1 bg-cover h-24"
-                //   style="background-image: url('../assets/images/30.jpg')"
-              ></div>
-              <div className="col-span-3">
-                <p className="font-light text-xs">Craig Bator - 27 Dec 2020</p>
-                <h3 className="font-header text-xl my-2">
-                  How to use basic design principles your home
-                </h3>
-              </div>
-            </a>
-            <a href="#" className="grid grid-cols-4 gap-2">
-              <div
-                className="col-span-1 bg-cover h-24"
-                //   style="background-image: url('../assets/images/31.jpg')"
-              ></div>
-              <div className="col-span-3">
-                <p className="font-light text-xs">Craig Bator - 27 Dec 2020</p>
-                <h3 className="font-header text-xl my-2">
-                  Creative decorationg with houseplants
-                </h3>
-              </div>
-            </a>
-            <a href="#" className="grid grid-cols-4 gap-2">
-              <div
-                className="col-span-1 bg-cover h-24"
-                //   style="background-image: url('../assets/images/32.jpg')"
-              ></div>
-              <div className="col-span-3">
-                <p className="font-light text-xs">Craig Bator - 27 Dec 2020</p>
-                <h3 className="font-header text-xl my-2">
-                  How to burn calories with pleasant activites
-                </h3>
-              </div>
-            </a>
+            {articles.map((val, i) => {
+              if (i <= 1) {
+                return (
+                  <>
+                    <a href="#" className="block">
+                      <div
+                        //   style="background-image: url('../assets/images/28.jpg')"
+                        style={{ backgroundImage: `url('${val.urlToImage}')` }}
+                        className="bg-cover h-80"
+                      ></div>
+                      <p className="font-light text-xs opacity-75 mt-4">
+                        {val.source.name}
+                      </p>
+                      <h3 className="font-header text-2xl my-2">{val.title}</h3>
+                      <p className="font-light opacity-75">{val.description}</p>
+                    </a>
+                  </>
+                );
+              } else {
+                return (
+                  <MinBlock
+                    key={val.url}
+                    headline={val.title}
+                    tagline={val.source.name}
+                    imgUrl={val.urlToImage}
+                  />
+                );
+              }
+            })}
           </div>
         </div>
         <div className="space-y-6">

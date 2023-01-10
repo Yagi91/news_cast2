@@ -1,6 +1,6 @@
 import MinBlock from "../ui/minBlock";
 
-export default function Entertainment({}) {
+export default function Entertainment({ articles }) {
   let data = [
     {
       caption: "Craig Bator - 27 Dec 2020",
@@ -24,31 +24,35 @@ export default function Entertainment({}) {
         </h2>
         <div className="py-4">
           <div
-            className="bg-center bg-cover h-[450px] items-end flex justify-start p-4 bg-[url('../public/images/16.jpg')]"
-            // style="background-image: url('../assets/images/16.jpg')"
+            className="bg-center bg-cover h-[450px] items-end flex justify-start p-4 relative"
+            style={{
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('${articles[0].urlToImage}')`,
+            }}
           >
             <div className="space-y-6">
               <a
                 href="#"
                 className="font-header text-2xl lg:text-4xl text-white"
               >
-                Amanda Seyfried became ‘really obsessed’ with ghost stories
+                {articles[0].title}
               </a>
               <p className="font-light opacity-75 max-w-lg text-white">
-                Hollywood actress Amanda Seyfried has recalled the time when she
-                became obsessed with ghost stories
+                {articles[0].description}
               </p>
             </div>
           </div>
           <div className="my-4 grid grid-cols-1 lg:grid-cols-3 space-y-4 lg:space-y-0">
-            {data.map((val) => {
-              return (
-                <MinBlock
-                  key={val.caption}
-                  headline={val.headline}
-                  tagline={val.caption}
-                />
-              );
+            {articles.map((article, i) => {
+              if (i > 0) {
+                return (
+                  <MinBlock
+                    key={article.url}
+                    headline={article.title}
+                    tagline={article.source.name || ""}
+                    imgUrl={article.urlToImage}
+                  />
+                );
+              }
             })}
           </div>
         </div>

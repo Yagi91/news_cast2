@@ -1,9 +1,9 @@
-function MinBlock({ headline, tagline }) {
+function MinBlock({ headline, tagline, imgUrl }) {
   return (
     <a href="#" className="grid grid-cols-4 gap-2">
       <div
-        className="col-span-1 bg-cover h-24 bg-[url('../public/images/6.jpg')]"
-        // style="background-image: url('../assets/images/7=6-15.jpg')"
+        className="col-span-1 bg-cover h-24"
+        style={{ backgroundImage: `url('${imgUrl}')` }}
       ></div>
       <div className="col-span-3">
         <p className="font-light text-xs">{tagline}</p>

@@ -1,4 +1,6 @@
-export default function Sports({}) {
+import MinBlock from "../ui/minBlock";
+
+export default function Sports({ articles }) {
   return (
     <section className="p-4 lg:p-0 container mx-auto">
       <div className="grid grid-cols-1 space-y-6 lg:space-y-0 lg:grid-cols-3 lg:gap-4">
@@ -9,92 +11,35 @@ export default function Sports({}) {
               <a href="#" className="block">
                 <div
                   //   style="background-image: url('../assets/images/20.jpg')"
+                  style={{
+                    backgroundImage: `url('${articles[0].urlToImage}')`,
+                  }}
                   className="bg-cover h-80"
                 ></div>
                 <p className="font-light text-xs opacity-75 mt-4">
-                  Craig Bator - 27 Dec 2020
+                  {articles[0].source.name}
                 </p>
                 <h3 className="font-header text-2xl my-2">
-                  Solskjaer dismisses Klopp comments on Man Utd penalty record
+                  {articles[0].title}
                 </h3>
                 <p className="font-light opacity-75">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Faucibus lobortis augue condimentum maecenas. Metus at in
-                  fames vitae posuere ut vel vulputate....
+                  {articles[0].description}
                 </p>
               </a>
             </div>
             <div className="space-y-4">
-              <a href="#" className="grid grid-cols-4 gap-2">
-                <div
-                  className="col-span-1 bg-cover h-24"
-                  // style="background-image: url('../assets/images/21.jpg')"
-                ></div>
-                <div className="col-span-3">
-                  <p className="font-light text-xs">
-                    Craig Bator - 27 Dec 2020
-                  </p>
-                  <h3 className="font-header text-xl my-2">
-                    South Africa hammer injury-hit Sri Lanka Player
-                  </h3>
-                </div>
-              </a>
-              <a href="#" className="grid grid-cols-4 gap-2">
-                <div
-                  className="col-span-1 bg-cover h-24"
-                  // style="background-image: url('../assets/images/22.jpg')"
-                ></div>
-                <div className="col-span-3">
-                  <p className="font-light text-xs">
-                    Craig Bator - 27 Dec 2020
-                  </p>
-                  <h3 className="font-header text-xl my-2">
-                    Southee-lead New Zealand have Pakistan on the ropes
-                  </h3>
-                </div>
-              </a>
-              <a href="#" className="grid grid-cols-4 gap-2">
-                <div
-                  className="col-span-1 bg-cover h-24"
-                  // style="background-image: url('../assets/images/23.jpg')"
-                ></div>
-                <div className="col-span-3">
-                  <p className="font-light text-xs">
-                    Craig Bator - 27 Dec 2020
-                  </p>
-                  <h3 className="font-header text-xl my-2">
-                    The only thing that overcomes hard luck is hard work
-                  </h3>
-                </div>
-              </a>
-              <a href="#" className="grid grid-cols-4 gap-2">
-                <div
-                  className="col-span-1 bg-cover h-24"
-                  // style="background-image: url('../assets/images/24.jpg')"
-                ></div>
-                <div className="col-span-3">
-                  <p className="font-light text-xs">
-                    Craig Bator - 27 Dec 2020
-                  </p>
-                  <h3 className="font-header text-xl my-2">
-                    Success is not a good teacher failure makes you humble
-                  </h3>
-                </div>
-              </a>
-              <a href="#" className="grid grid-cols-4 gap-2">
-                <div
-                  className="col-span-1 bg-cover h-24"
-                  // style="background-image: url('../assets/images/25.jpg')"
-                ></div>
-                <div className="col-span-3">
-                  <p className="font-light text-xs">
-                    Craig Bator - 27 Dec 2020
-                  </p>
-                  <h3 className="font-header text-xl my-2">
-                    Rahane-led India bury ghosts of Adelaide at Melbourne
-                  </h3>
-                </div>
-              </a>
+              {articles.map((val, i) => {
+                if (i > 0) {
+                  return (
+                    <MinBlock
+                      key={val.url}
+                      headline={val.title}
+                      tagline={val.source.name}
+                      imgUrl={val.urlToImage}
+                    />
+                  );
+                }
+              })}
             </div>
           </div>
         </div>
