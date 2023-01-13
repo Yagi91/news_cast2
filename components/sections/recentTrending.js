@@ -42,7 +42,7 @@ export default function RecentTrending({ articles }) {
                 className="bg-cover h-80 bg-[url('../public/images/5.jpg')] relative"
               >
                 <Image
-                  src={articles[1].urlToImage}
+                  src={articles[0].urlToImage}
                   alt=""
                   srcset=""
                   fill

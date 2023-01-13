@@ -48,7 +48,7 @@ export default function Lifestyle({ articles }) {
               </h5>
               <form action="#" className="mt-4 space-y-4">
                 <input
-                  type="text"
+                  type="email"
                   className="p-4 h-10 placeholder:opacity-60 block text-center placeholder:text-center placeholder:text-sm outline-none"
                   placeholder="Your email id "
                 />
@@ -68,12 +68,12 @@ export default function Lifestyle({ articles }) {
             <div className="flex flex-col pt-6 space-y-4">
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
-                  {/* <img
-                      src="../assets/images/caret_right.svg"
-                      alt=""
-                      srcset=""
-                      className="inline mr-2"
-                    /> */}
+                  <img
+                    src="/images/caret_right.svg"
+                    alt=""
+                    srcset=""
+                    className="inline mr-2"
+                  />
                   <span> Lifestyle </span>
                 </div>
                 <div className="bg-primary-500 h-10 w-10 text-center flex items-center justify-center">
@@ -82,12 +82,12 @@ export default function Lifestyle({ articles }) {
               </div>
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
-                  {/* <img
-                      src="../assets/images/caret_right.svg"
-                      alt=""
-                      srcset=""
-                      className="inline mr-2"
-                    /> */}
+                  <img
+                    src="/images/caret_right.svg"
+                    alt=""
+                    srcset=""
+                    className="inline mr-2"
+                  />
                   <span> World </span>
                 </div>
                 <div className="bg-[#A56CBD] h-10 w-10 text-center flex items-center justify-center">
@@ -96,12 +96,12 @@ export default function Lifestyle({ articles }) {
               </div>
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
-                  {/* <img
-                      src="../assets/images/caret_right.svg"
-                      alt=""
-                      srcset=""
-                      className="inline mr-2"
-                    /> */}
+                  <img
+                    src="/images/caret_right.svg"
+                    alt=""
+                    srcset=""
+                    className="inline mr-2"
+                  />
                   <span> Foods </span>
                 </div>
                 <div className="bg-[#C23785] h-10 w-10 text-center flex items-center justify-center">
@@ -110,12 +110,12 @@ export default function Lifestyle({ articles }) {
               </div>
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
-                  {/* <img
-                      src="../assets/images/caret_right.svg"
-                      alt=""
-                      srcset=""
-                      className="inline mr-2"
-                    /> */}
+                  <img
+                    src="/images/caret_right.svg"
+                    alt=""
+                    srcset=""
+                    className="inline mr-2"
+                  />
                   <span> Technology </span>
                 </div>
                 <div className="bg-[#4C60F5] h-10 w-10 text-center flex items-center justify-center">
@@ -124,12 +124,12 @@ export default function Lifestyle({ articles }) {
               </div>
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
-                  {/* <img
-                      src="../assets/images/caret_right.svg"
-                      alt=""
-                      srcset=""
-                      className="inline mr-2"
-                    /> */}
+                  <img
+                    src="/images/caret_right.svg"
+                    alt=""
+                    srcset=""
+                    className="inline mr-2"
+                  />
                   <span> Sports </span>
                 </div>
                 <div className="bg-[#0088FF] h-10 w-10 text-center flex items-center justify-center">
@@ -138,40 +138,12 @@ export default function Lifestyle({ articles }) {
               </div>
               <div className="flex justify-between items-center">
                 <div className="flex items-center">
-                  {/* <img
-                      src="../assets/images/caret_right.svg"
-                      alt=""
-                      srcset=""
-                      className="inline mr-2"
-                    /> */}
-                  <span> Football </span>
-                </div>
-                <div className="bg-[#F7679D] h-10 w-10 text-center flex items-center justify-center">
-                  <p className="text-white">5</p>
-                </div>
-              </div>
-              <div className="flex justify-between items-center">
-                <div className="flex items-center">
-                  {/* <img
-                      src="../assets/images/caret_right.svg"
-                      alt=""
-                      srcset=""
-                      className="inline mr-2"
-                    /> */}
-                  <span> Cricket </span>
-                </div>
-                <div className="bg-[#42C0F5] h-10 w-10 text-center flex items-center justify-center">
-                  <p className="text-white">67</p>
-                </div>
-              </div>
-              <div className="flex justify-between items-center">
-                <div className="flex items-center">
-                  {/* <img
-                      src="../assets/images/caret_right.svg"
-                      alt=""
-                      srcset=""
-                      className="inline mr-2"
-                    /> */}
+                  <img
+                    src="/images/caret_right.svg"
+                    alt=""
+                    srcset=""
+                    className="inline mr-2"
+                  />
                   <span> COVID 19 </span>
                 </div>
                 <div className="bg-[#49CFE8] h-10 w-10 text-center flex items-center justify-center">

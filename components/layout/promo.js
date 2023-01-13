@@ -5,7 +5,7 @@ function Promo({}) {
       <div className="grid h-20 grid-cols-12">
         <div className="hidden lg:col-span-4 lg:flex justify-start items-center">
           <a href="index.html" className="gap-4 items-center flex">
-            <img src="/news_cast/public/images/logo.png" alt="" />
+            <img src="/images/logo.png" alt="" />
             <h1 className="font-header font-bold text-4xl cursor-pointer">
               News<span className="text-primary-500 font-header">cast</span>
             </h1>

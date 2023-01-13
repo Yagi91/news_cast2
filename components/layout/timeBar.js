@@ -1,23 +1,16 @@
 import Image from "next/image";
-// import weather from "../../public/images/weather.svg";
-// import weather from "../../public/vercel.svg";
 
 export default function TimeBar(props) {
   // console.log(weather);
   return (
     <section className="hidden container mx-auto lg:flex py-0 max-h-11 my-4 justify-between items-center text-xs">
       <div className="space-x-3 flex items-center">
-        <div className="inline-flex items-center gap-2">
-          {/* <img src={"/news_cast/public/images/weather.svg"} alt="" /> */}
+        <div className="inline-flex items-center gap-2 relative">
+          <Image src="/weather.svg" alt="" height={16} width={16} />
           <p>15&deg;C New York</p>
         </div>
         <div className="inline-flex items-center gap-2">
-          {/* <Image
-            src="/news_cast/public/images/clock.svg"
-            alt=""
-            height={15}
-            width={20}
-          /> */}
+          <Image src="/images/clock.svg" alt="" height={14} width={14} />
           <p>Wednesday, 10 Jan 2022</p>
         </div>
         <div className="h-full bg-primary-500 text-white p-2">

@@ -51,38 +51,38 @@ export default function Sports({ articles }) {
             <div className="grid grid-cols-2 gap-2 py-4 gap-y-4">
               <button className="bg-[#4281FF] hover:bg-[#1A66FF] hover:duration-300 py-4 px-2 text-center">
                 <div className="flex item-center justify-center gap-4">
-                  {/* <img src="../assets/images/facebook.svg" /> */}
-                  <p className="text-sm text-white">20000 Followers</p>
+                  <img src="/images/facebook.svg" />
+                  <p className="text-sm text-white">1M Followers</p>
                 </div>
               </button>
               <button className="bg-[#C23785] hover:bg-[#AF3278] hover:duration-300 py-4 px-2 text-center">
                 <div className="flex item-center justify-center gap-4">
-                  {/* <img src="../assets/images/instagram.svg" /> */}
-                  <p className="text-sm text-white">20000 Followers</p>
+                  <img src="/images/instagram.svg" />
+                  <p className="text-sm text-white">500K Followers</p>
                 </div>
               </button>
               <button className="bg-[#EF5043] hover:bg-[#ED3A2C] hover:duration-300 py-4 px-2 text-center">
                 <div className="flex item-center justify-center gap-4">
-                  {/* <img src="../assets/images/youtube.svg" /> */}
-                  <p className="text-sm text-white">20000 Followers</p>
+                  <img src="/images/youtube.svg" />
+                  <p className="text-sm text-white">100k Subscribers</p>
                 </div>
               </button>
               <button className="bg-[#42C0F5] hover:bg-[#2AB8F4] hover:duration-300 py-4 px-2 text-center">
                 <div className="flex item-center justify-center gap-4">
-                  {/* <img src="../assets/images/twitter.svg" /> */}
-                  <p className="text-sm text-white">20000 Followers</p>
+                  <img src="/images/twitter.svg" />
+                  <p className="text-sm text-white">200k Followers</p>
                 </div>
               </button>
               <button className="bg-[#1B7BFD] hover:bg-[#026DFD] hover:duration-300 py-4 px-2 text-center">
                 <div className="flex item-center justify-center gap-4">
-                  {/* <img src="../assets/images/Behance.svg" /> */}
-                  <p className="text-sm text-white">20000 Followers</p>
+                  <img src="/images/Behance.svg" />
+                  <p className="text-sm text-white">2000 Followers</p>
                 </div>
               </button>
               <button className="bg-[#F7679D] hover:bg-[#F6518F] hover:duration-300 py-4 px-2 text-center">
                 <div className="flex item-center justify-center gap-4">
-                  {/* <img src="../assets/images/dribbble.svg" /> */}
-                  <p className="text-sm text-white">20000 Followers</p>
+                  <img src="/images/dribbble.svg" />
+                  <p className="text-sm text-white">5000 Followers</p>
                 </div>
               </button>
             </div>
