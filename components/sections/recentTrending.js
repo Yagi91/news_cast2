@@ -34,7 +34,7 @@ export default function RecentTrending({ articles }) {
             {"Don't Miss"}
           </h2>
           <div className="grid grid-cols-1 gap-4 space-y-4 lg:space-y-0 lg:grid-cols-2 py-4">
-            <a href="#" className="block">
+            <a href="#" className="block h-fit group">
               <div
                 // style={{
                 //   backgroundImage: `url('${articles[0].urlToImage}')`,
@@ -54,7 +54,9 @@ export default function RecentTrending({ articles }) {
               <p className="font-light text-xs opacity-75 mt-4">
                 {articles[0].source.name}
               </p>
-              <h3 className="font-header text-2xl my-2">{articles[0].title}</h3>
+              <h3 className="font-header text-2xl my-2 group-hover:text-primary-600">
+                {articles[0].title}
+              </h3>
               <p className="font-light opacity-75">{articles[0].description}</p>
             </a>
             <div className="space-y-4">

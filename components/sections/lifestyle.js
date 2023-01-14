@@ -13,7 +13,7 @@ export default function Lifestyle({ articles }) {
               if (i <= 1) {
                 return (
                   <>
-                    <a href="#" className="block">
+                    <a href="#" className="block h-fit group">
                       <div
                         //   style="background-image: url('../assets/images/28.jpg')"
                         style={{ backgroundImage: `url('${val.urlToImage}')` }}
@@ -22,7 +22,9 @@ export default function Lifestyle({ articles }) {
                       <p className="font-light text-xs opacity-75 mt-4">
                         {val.source.name}
                       </p>
-                      <h3 className="font-header text-2xl my-2">{val.title}</h3>
+                      <h3 className="font-header text-2xl my-2 group-hover:text-primary-600">
+                        {val.title}
+                      </h3>
                       <p className="font-light opacity-75">{val.description}</p>
                     </a>
                   </>

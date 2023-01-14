@@ -45,7 +45,7 @@ export default function Videos({ articles }) {
                         </div>
                         <div className="mt-4">
                           <p className="font-light text-xs">{article.author}</p>
-                          <h3 className="font-header text-xl my-2">
+                          <h3 className="font-header text-xl my-2 hover:text-primary-600">
                             {article.title}
                           </h3>
                         </div>
@@ -56,7 +56,7 @@ export default function Videos({ articles }) {
               } else {
                 return (
                   <>
-                    <a href="#" className="block col-span-3">
+                    <a href="#" className="block col-span-3 group">
                       <div
                         className="bg-cover h-96 p-4"
                         style={{
@@ -68,7 +68,7 @@ export default function Videos({ articles }) {
                           <p className="text-white font-light opacity-75">
                             {article.author} - {article.source.name}
                           </p>
-                          <h3 className="text-2xl font-bold text-white">
+                          <h3 className="text-2xl font-bold text-white group-hover:text-primary-600">
                             {article.title}
                           </h3>
                         </div>

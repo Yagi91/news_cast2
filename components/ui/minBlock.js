@@ -11,7 +11,7 @@ function MinBlock({ headline, tagline, imgUrl }) {
   }
 
   return (
-    <a href="#" className="grid grid-cols-4 gap-2">
+    <a href="#" className="grid grid-cols-4 gap-2 group">
       <div
         className="col-span-1 bg-cover h-24 relative"
         // style={{ backgroundImage: `url('${imgUrl}')` }}
@@ -33,7 +33,9 @@ function MinBlock({ headline, tagline, imgUrl }) {
       </div>
       <div className="col-span-3">
         <p className="font-light text-xs">{tagline}</p>
-        <h3 className="font-header text-xl my-2">{headline}</h3>
+        <h3 className="font-header text-xl my-2 group-hover:text-primary-600">
+          {headline}
+        </h3>
       </div>
     </a>
   );
