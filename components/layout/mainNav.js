@@ -64,7 +64,7 @@ export default function MainNav({}) {
         </div>
         <div className="pb-4 lg:pb-0">
           {/* Search form */}
-          <SearchBar classes="px-6" />
+          <SearchBar classes="px-7 relative border border-gray-600" />
         </div>
       </div>
     </section>
