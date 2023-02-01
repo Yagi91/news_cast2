@@ -44,7 +44,7 @@ export default function RecentTrending({ articles }) {
                 <Image
                   src={articles[0].urlToImage}
                   alt=""
-                  srcset=""
+                  srcSet=""
                   fill
                   style={{
                     objectFit: "cover",
