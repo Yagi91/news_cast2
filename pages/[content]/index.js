@@ -18,6 +18,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
+  console.log(context.params.content);
   //fetch data from API
   let p = "hhu";
   // we need axios to make HTTP requests
