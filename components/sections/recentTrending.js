@@ -3,29 +3,6 @@ import RedText from "../ui/redText";
 import Image from "next/image";
 
 export default function RecentTrending({ articles }) {
-  let data1 = [
-    {
-      caption: "Craig Bator - 27 Dec 2020",
-      headline: "Now Is the Time to Think About Your Small Business Success",
-    },
-    {
-      caption: "Craig Bator - 27 Dec 2020",
-      headline: "Things to Look For in a Financial Trading Platform",
-    },
-    {
-      caption: "Craig Bator - 27 Dec 2020",
-      headline: "The only thing that overcomes hard luck is hard work",
-    },
-    {
-      caption: "Craig Bator - 27 Dec 2020",
-      headline: "Success is not a good teacher failure makes you humble",
-    },
-    {
-      caption: "Craig Bator - 27 Dec 2020",
-      headline: "At Value-Focused Hotels, the Free Breakfast Gets Bigger",
-    },
-  ];
-
   return (
     <section className="p-4 lg:p-0 container mx-auto">
       <div className="grid grid-cols-1 space-y-6 lg:space-y-0 lg:grid-cols-3 lg:gap-4">
