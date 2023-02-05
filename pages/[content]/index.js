@@ -1,24 +1,37 @@
-import { getServerSideProps } from "..";
-
 function articleDetails({ content }) {
-  return <h1>The Detail Page{content}</h1>;
+  return (
+    <div class="min-h-screen">
+      <section class="mx-auto container p-4 lg:p-0 my-8">
+        <h1 class="font-header text-4xl font-bold w-1/2">
+          Now Is the Time to Think About Your Small Business Success
+        </h1>
+        <div class="mt-8 space-y-4">
+          {/* <img src="../assets/images/1.jpg" class="w-1/3 h-auto" alt="" /> */}
+          <p class="text-lg opacity-80">{content}</p>
+          <p class="text-lg opacity-80">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+            adipisci nulla earum magni? Sint provident omnis voluptatibus,
+            maiores autem quam reprehenderit, similique voluptates nulla
+            voluptas harum corporis veniam maxime dolor facilis porro iure ullam
+            alias ad facere! Asperiores assumenda reiciendis voluptatem nobis
+            possimus aperiam adipisci tempore quibusdam earum, sit, et modi
+            dicta sed magni debitis vel pariatur quas odio deserunt, ducimus
+            laudantium. Tenetur optio repudiandae adipisci voluptatum incidunt
+            rem, cupiditate illum voluptate eaque facilis dignissimos.
+            Voluptatum fugiat magnam aperiam repellendus. Qui, fuga? Deleniti
+            laudantium earum alias impedit ipsa ratione libero temporibus eius.
+            Optio ullam sunt nostrum quae iste, voluptate aperiam.
+          </p>
+        </div>
+      </section>
+    </div>
+  );
 }
 
-export async function getStaticPaths() {
-  return {
-    paths: [
-      {
-        params: {
-          content: "article",
-        },
-      },
-    ],
-    fallback: true,
-  };
-}
-
-export async function getStaticProps(context) {
-  console.log(context.params.content);
+export async function getServerSideProps(context) {
+  //get the parameter used to access the page
+  let articleUrl = context.params.content;
+  console.log("query", context.query, articleUrl);
   //fetch data from API
   let p = "hhu";
   // we need axios to make HTTP requests
@@ -75,7 +88,6 @@ export async function getStaticProps(context) {
     props: {
       content: article.textContent,
     },
-    revalidate: 60,
   };
 }
 
