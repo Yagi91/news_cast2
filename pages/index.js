@@ -7,15 +7,7 @@ import Sports from "../components/sections/sports";
 import Lifestyle from "../components/sections/lifestyle";
 import Videos from "../components/sections/videos";
 
-function Home({
-  card,
-  headData,
-  entertainment,
-  sports,
-  lifestyle,
-  tech,
-  doNotMiss,
-}) {
+function Home({ headData, entertainment, sports, lifestyle, tech, doNotMiss }) {
   return (
     <>
       <section className="container mx-auto mb-4 lg:mb-8">
@@ -42,7 +34,6 @@ function Home({
               if (i >= 1) {
                 let extraClass = i >= 3 ? "col-span-2" : "";
                 let height = i < 3 ? "h-48" : "h-44";
-                console.log(card.urlToImage);
                 return (
                   <MidBlock
                     key={card.urlNum}
@@ -51,6 +42,7 @@ function Home({
                     imgUrl={card.urlToImage}
                     headline={card.description}
                     extraClass={extraClass}
+                    url={card.url}
                   />
                 );
               }
@@ -66,17 +58,6 @@ function Home({
     </>
   );
 }
-
-// export async function getStaticProps() {
-//   //fetch data from API
-
-//   return {
-//     props: {
-//       card: cardInfo,
-//     },
-//     revalidate: 60,
-//   };
-// }
 
 export async function getServerSideProps(context) {
   //fetch data from API
@@ -113,7 +94,7 @@ export async function getServerSideProps(context) {
 
   entertainment = await resEnt.json();
   entertainment = entertainment.articles;
-  console.log("most entertainment", entertainment);
+  // console.log("most entertainment", entertainment);
 
   const resSports = await fetch(
     `https://newsapi.org/v2/top-headlines?language=en&category=sports&pageSize=6`,
