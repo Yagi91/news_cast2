@@ -50,6 +50,7 @@ export default function Entertainment({ articles }) {
                     headline={article.title}
                     tagline={article.source.name || ""}
                     imgUrl={article.urlToImage}
+                    url={article.url}
                   />
                 );
               }

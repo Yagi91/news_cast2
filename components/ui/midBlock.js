@@ -1,12 +1,18 @@
+import { urlPasser, sendProps } from "../../utils/uiUtils";
+
 export default function MidBlock({
   extraClass,
   title,
   headline,
   bgClass,
   imgUrl,
+  url,
 }) {
   return (
-    <a href="blog_detail.html" className={`block ${extraClass}`}>
+    <div
+      className={`block ${extraClass}`}
+      onClick={() => sendProps(title, imgUrl, url)}
+    >
       <div
         style={{
           background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('${imgUrl}')`,
@@ -22,6 +28,6 @@ export default function MidBlock({
           </h3>
         </div>
       </div>
-    </a>
+    </div>
   );
 }

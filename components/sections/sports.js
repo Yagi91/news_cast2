@@ -36,6 +36,7 @@ export default function Sports({ articles }) {
                       headline={val.title}
                       tagline={val.source.name}
                       imgUrl={val.urlToImage}
+                      url={val.url}
                     />
                   );
                 }
