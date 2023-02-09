@@ -1,4 +1,5 @@
 import MinBlock from "../ui/minBlock";
+import { MidBlock } from "../ui/midBlock";
 
 export default function Lifestyle({ articles }) {
   return (
@@ -13,20 +14,14 @@ export default function Lifestyle({ articles }) {
               if (i <= 1) {
                 return (
                   <>
-                    <a href="#" className="block h-fit group">
-                      <div
-                        //   style="background-image: url('../assets/images/28.jpg')"
-                        style={{ backgroundImage: `url('${val.urlToImage}')` }}
-                        className="bg-cover h-80"
-                      ></div>
-                      <p className="font-light text-xs opacity-75 mt-4">
-                        {val.source.name}
-                      </p>
-                      <h3 className="font-header text-2xl my-2 group-hover:text-primary-600">
-                        {val.title}
-                      </h3>
-                      <p className="font-light opacity-75">{val.description}</p>
-                    </a>
+                    <MidBlock
+                      key={val.url}
+                      description={val.description}
+                      url={val.url}
+                      sourceName={val.source.name}
+                      title={val.title}
+                      imgUrl={val.urlToImage}
+                    />
                   </>
                 );
               } else {

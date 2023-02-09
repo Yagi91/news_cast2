@@ -1,6 +1,6 @@
 import MinBlock from "../ui/minBlock";
 import RedText from "../ui/redText";
-import Image from "next/image";
+import { MidBlock } from "../ui/midBlock";
 
 export default function RecentTrending({ articles }) {
   return (
@@ -11,31 +11,13 @@ export default function RecentTrending({ articles }) {
             {"Don't Miss"}
           </h2>
           <div className="grid grid-cols-1 gap-4 space-y-4 lg:space-y-0 lg:grid-cols-2 py-4">
-            <a href="#" className="block h-fit group">
-              <div
-                // style={{
-                //   backgroundImage: `url('${articles[0].urlToImage}')`,
-                // }}
-                className="bg-cover h-80 bg-[url('../public/images/5.jpg')] relative"
-              >
-                <Image
-                  src={articles[0].urlToImage}
-                  alt=""
-                  srcSet=""
-                  fill
-                  style={{
-                    objectFit: "cover",
-                  }}
-                />
-              </div>
-              <p className="font-light text-xs opacity-75 mt-4">
-                {articles[0].source.name}
-              </p>
-              <h3 className="font-header text-2xl my-2 group-hover:text-primary-600">
-                {articles[0].title}
-              </h3>
-              <p className="font-light opacity-75">{articles[0].description}</p>
-            </a>
+            <MidBlock
+              url={articles[0].url}
+              imgUrl={articles[0].urlToImage}
+              title={articles[0].title}
+              sourceName={articles[0].source.name}
+              description={articles[0].description}
+            />
             <div className="space-y-4">
               {articles.map((val, i) => {
                 if (i > 0 && i < 6) {

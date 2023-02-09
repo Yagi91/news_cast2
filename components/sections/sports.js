@@ -1,3 +1,4 @@
+import { MidBlock } from "../ui/midBlock";
 import MinBlock from "../ui/minBlock";
 
 export default function Sports({ articles }) {
@@ -8,24 +9,13 @@ export default function Sports({ articles }) {
           <h2 className="text-primary-500 font-header text-2xl py-2">Sports</h2>
           <div className="grid grid-cols-1 gap-4 space-y-4 lg:space-y-0 lg:grid-cols-2 py-4">
             <div>
-              <a href="#" className="block group h-fit">
-                <div
-                  //   style="background-image: url('../assets/images/20.jpg')"
-                  style={{
-                    backgroundImage: `url('${articles[0].urlToImage}')`,
-                  }}
-                  className="bg-cover h-80"
-                ></div>
-                <p className="font-light text-xs opacity-75 mt-4">
-                  {articles[0].source.name}
-                </p>
-                <h3 className="font-header text-2xl my-2 group-hover:text-primary-600">
-                  {articles[0].title}
-                </h3>
-                <p className="font-light opacity-75">
-                  {articles[0].description}
-                </p>
-              </a>
+              <MidBlock
+                url={articles[0].url}
+                imgUrl={articles[0].urlToImage}
+                title={articles[0].title}
+                sourceName={articles[0].source.name}
+                description={articles[0].description}
+              />
             </div>
             <div className="space-y-4">
               {articles.map((val, i) => {

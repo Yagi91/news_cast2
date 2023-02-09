@@ -1,22 +1,12 @@
 import Image from "next/image";
+import { AdBlock } from "../ui/adBlock";
 
 export default function Videos({ articles }) {
   return (
     <section className="lg:p-0 container mx-auto lg:grid lg:grid-cols-4 my-6">
       <div className="lg:col-span-3">
         <div className="px-6 flex items-center justify-between bg-[url('../public/images/promo_cover.jpg')] bg-cover">
-          <div className="text-white font-light text-xs lg:text-base py-2">
-            <p>Best selling book and magazine</p>
-            <p>Theme of all time</p>
-            <p className="font-header italic text-primary-600 my-1">
-              Experience the change
-            </p>
-          </div>
-          <div>
-            <button className="bg-primary-500 hover:bg-primary-600 hover:transition-all text-white px-2 lg:px-6 lg:py-4 py-2">
-              Purchase Now
-            </button>
-          </div>
+          <AdBlock />
         </div>
         <div className="p-4 lg:0 divide-y divide-ncDark">
           <h2 className="text-primary-500 font-header text-2xl py-2">Videos</h2>
@@ -25,14 +15,9 @@ export default function Videos({ articles }) {
               if (i > 0) {
                 return (
                   <>
-                    <div className="col-span-3 lg:col-span-1">
+                    <div className="col-span-3 lg:col-span-1" key={article.url}>
                       <a href="#" className="block">
-                        <div
-                          className="bg-cover flex items-center h-48 justify-center relative"
-                          // style={{
-                          //   backgroundImage: `url('${article.urlToImage}')`,
-                          // }}
-                        >
+                        <div className="bg-cover flex items-center h-48 justify-center relative">
                           <Image
                             src={article.urlToImage}
                             alt=""
@@ -56,11 +41,15 @@ export default function Videos({ articles }) {
               } else {
                 return (
                   <>
-                    <a href="#" className="block col-span-3 group">
+                    <a
+                      href="#"
+                      className="block col-span-3 group"
+                      key={article.url}
+                    >
                       <div
                         className="bg-cover h-96 p-4"
                         style={{
-                          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('${article.urlToImage})`,
+                          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('${article.urlToImage}')`,
                         }}
                       >
                         <div className="flex items-end justify-center h-1/2"></div>

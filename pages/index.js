@@ -1,6 +1,6 @@
 // import Head from "next/head";
 // import Image from "next/image";
-import MidBlock from "../components/ui/midBlock";
+import MidBlock from "../components/ui/cardBlock";
 import RecentTrending from "../components/sections/recentTrending";
 import Entertainment from "../components/sections/entertainment";
 import Sports from "../components/sections/sports";

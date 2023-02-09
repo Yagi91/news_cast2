@@ -1,4 +1,4 @@
-import MidBlock from "../ui/midBlock";
+import CardBlock from "../ui/cardBlock";
 
 export function HomeBanners({ articles }) {
   return (
@@ -27,7 +27,7 @@ export function HomeBanners({ articles }) {
               let extraClass = i >= 3 ? "col-span-2" : "";
               let height = i < 3 ? "h-48" : "h-44";
               return (
-                <MidBlock
+                <CardBlock
                   key={card.urlNum}
                   bgClass={height}
                   title={card.title}
