@@ -1,6 +1,8 @@
-import Image from "next/image";
-
 export default function Footer({}) {
+  function getyear() {
+    return new Date().getFullYear();
+  }
+
   return (
     <footer className="bg-ncDark">
       <div className="container mx-auto px-4 py-8">
@@ -13,8 +15,9 @@ export default function Footer({}) {
               </h1>
             </div>
             <p className="text-white opacity-75">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque,
-              pellentesque dictum posuere id diam rutrum.
+              © {getyear()} NewsCast. The NewsCast is not responsible for the
+              content of external sites. Read about our approach to external
+              linking.
             </p>
             <div className="flex items-center justify-start gap-x-8">
               <div className="h-12 w-12 rounded-[48px] flex bg-[#1B7BFD] justify-center items-center relative">
