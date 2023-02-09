@@ -1,16 +1,13 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-export default function TimeBar(props) {
+export default function TimeBar({ timezone }) {
   // function to get the date in locale format
   const [weather, setWeather] = useState("");
   const [date, setDate] = useState("");
-  const [timeZone, setTimeZone] = useState("");
 
-  //get the date and time and weather
+  //get the date, time and weather
   useEffect(() => {
-    let timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    setTimeZone(timeZone);
     function dateLocale() {
       let date = new Date();
       let day = date.toLocaleString(navigator.language, {
@@ -27,12 +24,14 @@ export default function TimeBar(props) {
 
     function getWeather() {
       //get weather data
+      let key = process.env.NEXT_PUBLIC_WEATHER_API;
       fetch(
-        `https://api.weatherapi.com/v1/current.json?key=` +
-          process.env.NEXT_PUBLIC_WEATHER_API +
-          `&q=${timeZone}&aqi=no`,
+        `https://api.weatherapi.com/v1/current.json?key=${key}&q=${timezone}&aqi=no`,
         {
           method: "GET",
+          headers: {
+            Authorization: key,
+          },
         }
       )
         .then((res) => res.json())
@@ -49,7 +48,7 @@ export default function TimeBar(props) {
     getWeather();
 
     setDate(dateLocale());
-  }, []);
+  }, [timezone]);
 
   return (
     <section className="hidden container mx-auto lg:flex py-0 max-h-11 my-4 justify-between items-center text-xs">
@@ -57,7 +56,7 @@ export default function TimeBar(props) {
         <div className="inline-flex items-center gap-2 relative">
           <Image src="/weather.svg" alt="" height={16} width={16} />
           <span>
-            {weather}&deg;C {timeZone}
+            {weather}&deg;C {timezone}
           </span>
         </div>
         <div className="inline-flex items-center gap-2">

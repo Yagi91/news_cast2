@@ -6,7 +6,7 @@ import Footer from "./footer";
 export default function Layout(props) {
   return (
     <div className="min-h-screen">
-      <TimeBar />
+      <TimeBar timezone={Intl.DateTimeFormat().resolvedOptions().timeZone} />
       <Promo />
       <MainNav />
       <main>{props.children}</main>
