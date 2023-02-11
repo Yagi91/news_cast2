@@ -42,8 +42,8 @@ export default function Videos({ articles }) {
                 return (
                   <>
                     <a
-                      href="#"
-                      className="block col-span-3 group"
+                      href=""
+                      className="block col-span-3 group cursor-pointer"
                       key={article.url}
                     >
                       <div

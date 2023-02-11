@@ -9,7 +9,7 @@ export function HomeBanners({ articles }) {
             style={{
               background: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('${articles[0].urlToImage}')`,
             }}
-            className="bg-cover flex items-end justify-start h-120 h-96 bg-bottom"
+            className="bg-cover flex items-end justify-start h-120 h-96 bg-bottom cursor-pointer"
           >
             <div className="p-3">
               <p className="text-xs font-light text-gray-300">
