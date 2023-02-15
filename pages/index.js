@@ -15,7 +15,7 @@ function Home({ headData, entertainment, sports, lifestyle, tech, doNotMiss }) {
       <RecentTrending articles={doNotMiss} />
       <Entertainment articles={entertainment} />
       <Sports articles={sports} />
-      <Lifestyle articles={lifestyle} />
+      {/* <Lifestyle articles={lifestyle} /> */}
       <Videos articles={tech} />
     </>
   );

@@ -12,7 +12,7 @@ export function urlPasser(str) {
 
 // route to the page with the tagline as the pathname and the url data as query
 export function sendProps(tagline, imgUrl, url) {
-  if (url) {
+  if (url && tagline) {
     Router.push(
       {
         pathname: `/${encodeURIComponent(tagline)}`,
@@ -23,5 +23,5 @@ export function sendProps(tagline, imgUrl, url) {
       },
       `/${tagline}`
     );
-  }
+  } else return;
 }
