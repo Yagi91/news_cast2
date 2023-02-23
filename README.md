@@ -23,16 +23,13 @@ This is a [News site](https://vercel.com/yagi91/news-cast2)
 - [Credit](#credits).
 
 ### Description
-This a Scatter PLot that shows the Doping in Professional Bicycle Racing based on the 35 Fastest Runs from the the year 1994-2016. Doping has really been an issue in Pro Bicycle racing through out the past 36 years with many having accepted of once doping.
+NewsCast pulls news from various sources around the globe in many langguages. Details containing the article is scrabed and displayed in a seperate page to the end user. Various common categories are available for the user to browse through.
 
 
 ### TOOLS:
--Scatter Plot: It was used beacause, Scatter Plot can esily show the reltion betwenn 2 variable this relation can be in 2 ways strong or weak, negative or positive. In our case this is a strong relation because we have areas where the dots are closely packed and it takes the posiive direction. 
-- Vanilla JS: It was easier to build with Javascript as the website does not require to do many things.
-    nested rules, inline imports and more
-- HTML5/CSS6
-- D3.js: a Huge JavaScript libary that can be used to reprsent data, its very flxible thn most of the other ones out therelike chart.js though difficult to implement.;
-- AJAX: with xhr element which is still widely sipported accross multiple browsers than the fetch API.
+- NextJS: It provides me with sever side rendering wich is important for a side using a 3rd party API. Also implementing page routing with this was a breeze ⚡ 
+- TailwindCSS: Facilates developing mobile freindly side with a few class, though it could be hectic managing the classes.💼
+- JSOm & Readabilty: A javaScript library to ease scraping of the content from the offcial news site since the Google's news API does not provide the content;
 ## USERS STORY COMPLETED
 - I can see a title element that has a corresponding id="title.
 - Bottom and left axis are present.
